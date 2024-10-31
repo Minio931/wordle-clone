@@ -1,0 +1,26 @@
+.grid-item{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  border: 2px solid rgba(68, 62, 62, 0.5);
+  box-shadow: 0px 0px 5px 2px rgba(68, 62, 62, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 500;
+  &--correct {
+    background: #B2FF9E;
+  }
+  &--wrong {
+    background: #F9DC5C;
+  }
+  &--neutral {
+    background: #fafafa;
+  }
+  &--highlight {
+    background: white;
+    box-shadow: none;
+    transform: scale(1.1);
+  }
+}

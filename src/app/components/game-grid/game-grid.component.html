@@ -1,0 +1,24 @@
+<div class="grid">
+    @for (row of gameGrid; track $index) {
+        <div class="grid__row">
+            @for(item of row; track $index) {
+                <app-game-grid-item [letter]="item.content" [state]="item.state" />
+            }
+        </div>
+    }
+    <ng-container [ngTemplateOutlet]="dialog"></ng-container>
+</div>
+
+<ng-template #dialog>
+    @if (hasError) {
+        <div @dialog class="error-dialog">
+            <p>{{errorMessage}}</p>
+        </div>
+    }
+    @if (gameState === GameStateEnum.WIN || gameState === GameStateEnum.LOST) {
+        <div class="endgame-dialog">
+            <h1 class="endgame-dialog__header">{{endgameDialogText()}}</h1>
+            <button (click)="resetGameHandler()" class="endgame-dialog__button">Try again</button>
+        </div>
+    }
+</ng-template>

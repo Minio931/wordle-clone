@@ -1,0 +1,9 @@
+<div class="keyboard">
+    @for (row of keys; track $index) {
+        <div class="keyboard__row">
+            @for (key of row; track $index) {
+                <app-key [key]="key.label" [isPressed]="key.isPressed"/>
+            }
+        </div>
+    }
+</div>

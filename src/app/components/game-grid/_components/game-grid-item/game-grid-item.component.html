@@ -1,0 +1,8 @@
+<div class="grid-item" [ngClass]="{
+'grid-item--correct': state() === TileState.CORRECT,
+'grid-item--neutral': state() === TileState.NEUTRAL,
+'grid-item--wrong': state() === TileState.WRONG,
+'grid-item--highlight': state() === TileState.HIGHLIGHT
+}" >
+ {{letter()}}
+</div>

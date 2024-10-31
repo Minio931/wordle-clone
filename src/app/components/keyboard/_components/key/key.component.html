@@ -1,0 +1,6 @@
+<div class="key" [ngClass]="{
+    'key--disabled': isPressed(),
+    'key--active': !isPressed()
+}">
+    {{key()}}
+</div>
